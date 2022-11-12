@@ -15,8 +15,6 @@ module.exports = execute;
 function execute(options) {
   log = log.bind(log, options.verbose || false);
 
-  console.log('options: ', options);
-
   const out = options.out || OUT;
   const lhScript = lighthouseScript(options, log);
   const summaryPath = path.join(out, REPORT_SUMMARY);
